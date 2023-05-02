@@ -1,0 +1,17 @@
+body{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), #8b0f0f);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#main_page_content{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  margin: -50px 0 0 -50px;
+}
+h2{
+  color: whitesmoke;
+}
