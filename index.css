@@ -15,3 +15,7 @@ body{
 h2{
   color: whitesmoke;
 }
+input[type=text]{
+  border-radius: 5px;
+  font-size: 20px;
+}

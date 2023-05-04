@@ -24,7 +24,7 @@ function activityOnButtonClick(){
       activityContainer.innerHTML = `<h2>${activity.activity}</h2>`; 
       activityContainer.innerHTML += `<h2>The activity type is: ${activity.type}`;
       activityContainer.innerHTML += `<h2> Number of Participants Required: ${activity.participants}</h2>`;
-      activityContainer.innerHTML += `<h2>Cost of Activity: $${cost}.00</h2>`;
+    //   activityContainer.innerHTML += `<h2>Cost of Activity: $${cost}.00</h2>`;
       
     });
    })
@@ -48,10 +48,10 @@ function activityByType(){
                 
                    const activity = data;
                    const activityContainer = document.querySelector('.activityContainer');
-                   activityContainer.innerHTML = `<h2>Your Recreational Activty for the day is to: <br><br> ${activity.activity}</h2>`;
-                   activityContainer.innerHTML += `<h2>The activity type is: ${activity.type}`;
+                   activityContainer.innerHTML = `<h2>You should: ${activity.activity} !</h2>`;
+                   activityContainer.innerHTML += `<h2>This activity is considered: ${activity.type}`;
                    activityContainer.innerHTML += `<h2> Number of Participants Required: ${activity.participants}</h2>`;
-                   activityContainer.innerHTML += `<h2>Cost of Activity: $${activity.price}</h2>`;
+                //    activityContainer.innerHTML += `<h2>Cost of Activity: $${activity.price}</h2>`;
                    console.log(data);
                    
                })
@@ -64,7 +64,14 @@ function activityByType(){
                .then(data => {
                    const activity = data;
                    const activityContainer = document.querySelector('.activityContainer');
-                   activityContainer.innerHTML = `<h2>Your Educational Activity for the day is to: <br><br> ${activity.activity}</h2>`;
+                   activityContainer.innerHTML = 
+                   `<h2>We recommend that you: ${activity.activity}
+                   <br>
+                   <br>
+                   Improve your ${activity.type}!
+                   </h2>
+                   `;
+                   
                    console.log(data);
                })
                
@@ -76,8 +83,8 @@ function activityByType(){
                .then(data => {
                    const activity = data;
                    const activityContainer = document.querySelector('.activityContainer');
-                   activityContainer.innerHTML = `<h2>Your Social Activty for the day is to: <br><br> ${activity.activity}</h2>`;
-                   console.log(data);
+                   activityContainer.innerHTML = 
+                   `<h2>Maybe you should ${activity.activity}!</h2>`;
                })
 
            }else if (userSelection === 'relaxation'){
@@ -88,8 +95,8 @@ function activityByType(){
                .then(data => {
                    const activity = data;
                    const activityContainer = document.querySelector('.activityContainer');
-                   activityContainer.innerHTML = `<h2>Your Relaxing Activty for the day is to: <br><br> ${activity.activity}</h2>`;
-                   console.log(data);
+                   activityContainer.innerHTML = 
+                   `<h2>Relax and ${activity.activity}.</h2>`;
                })
             } else if (userSelection === 'active'){
             //FROM class.js FILE

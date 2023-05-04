@@ -154,9 +154,6 @@ function changeTheme(){
   const themeBtn = document.querySelector('#customButton');
   let colorArray = [];
   colorArray.push(Object.keys(CSS_COLOR_NAMES));
-  // console.log(colorArray);
-  // console.log(colorArray[0][0]);
-  // console.log(colorArray[0]);
   themeBtn.addEventListener('click', () => {
     // ASSIGNS A RANDOM INTEGER FROM 0 - 99.
     let randomNumber1 = Math.floor(Math.random() * 100);
