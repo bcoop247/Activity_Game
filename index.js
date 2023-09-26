@@ -30,3 +30,11 @@ function return_key(){
   });
 }
 return_key();
+
+function continueGuest(){
+  let id = document.getElementById("guest");
+  id.addEventListener("click", () => {
+    location.href="activity_game.html";
+  })
+}
+continueGuest();
